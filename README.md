@@ -33,4 +33,4 @@ Configuracion del flujo Node-RED
 
 1. En la pagina principal de Node-RED, presionar la opcion de importar en el menu posterior derecho. Seleccionar el archivo **flows.json**
 
-!(/Imagenes/Import_Node_Red.png)
+!(/Desktop/mqtt-server-bbb/Imagenes/Import_Node_Red.png)
