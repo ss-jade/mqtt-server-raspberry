@@ -1,5 +1,7 @@
 #
 Descarga de Mosquitto
+
+
 En el caso de distribuciones basadas en debian, la linea de comandos:
 
     sudo apt update
@@ -10,10 +12,9 @@ Para ejecutar mosquitto al arrancar el sistema, ejecutamos
 
 
     sudo systemctl enable mosquitto.service
-
-
 #
 Configuracion de server Mosquitto
+
 
 Reemplazar el archivo de configuracion con el comando mv
 
@@ -28,5 +29,6 @@ Reiniciar el servicio de mosquitto
 
 #
 Configuracion del flujo Node-RED
+
 
 1. En la pagina principal de Node-RED, presionar la opcion de importar en el menu posterior derecho. Seleccionar el archivo **flows.json**
