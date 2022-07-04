@@ -33,4 +33,4 @@ Configuracion del flujo Node-RED
 
 En la pagina principal de Node-RED, presionar la opcion de importar en el menu posterior derecho. Seleccionar el archivo **flows.json**
 
-!(/Imagenes/Import_Node_Red.png)
+![xd](/Imagenes/Import_Node_Red.png)
