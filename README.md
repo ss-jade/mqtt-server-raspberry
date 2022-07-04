@@ -31,6 +31,6 @@ Reiniciar el servicio de mosquitto
 Configuracion del flujo Node-RED
 
 
-1. En la pagina principal de Node-RED, presionar la opcion de importar en el menu posterior derecho. Seleccionar el archivo **flows.json**
+En la pagina principal de Node-RED, presionar la opcion de importar en el menu posterior derecho. Seleccionar el archivo **flows.json**
 
-!(/Desktop/mqtt-server-bbb/Imagenes/Import_Node_Red.png)
+!(/Imagenes/Import_Node_Red.png)
