@@ -1,5 +1,4 @@
-#
-Descarga de Mosquitto
+# Descarga de Mosquitto
 
 
 En el caso de distribuciones basadas en debian, la linea de comandos:
@@ -12,8 +11,7 @@ Para ejecutar mosquitto al arrancar el sistema, ejecutamos
 
 
     sudo systemctl enable mosquitto.service
-#
-Configuracion de server Mosquitto
+# Configuracion de server Mosquitto
 
 
 Reemplazar el archivo de configuracion con el comando mv
@@ -27,8 +25,7 @@ Reiniciar el servicio de mosquitto
     sudo systemctl restart mosquitto
 
 
-#
-Instalacion de Node-RED
+# Instalacion de Node-RED
 
 Lo primero ha realizar es la instalacion de nodejs, para eso escribimos la siguiente linea
 
@@ -42,8 +39,7 @@ Despues instalamos el node-red, y su complemento DASHBOARD
 Para acceder a node-RED, nos dirijimos al navegador y escribimos **localhost:1880**, esto nos llevara a la pantalla principal del node-red
 
 
-#
-Configuracion del flujo Node-RED
+# Configuracion del flujo Node-RED
 
 
 En la pagina principal de Node-RED, presionar la opcion de importar en el menu posterior derecho. Seleccionar el archivo **flows.json**
@@ -63,4 +59,10 @@ Una vez configurado, corremos el proceso con boton **Deploy**, en caso de haber 
 Como se puede apreciar, uno de los nodos es una salida de insterfaz de usuario de tipo texto. Para acceder a ella nos dirijimos al navegador y escribimos la siguiente direccion: **localhost:1880/ui**
 
 En esta interfaz se reciben los datos enviados por otros clientes al servidor mqtt
+
+# Recepcion de datos en DASHBOARD
+
+Al entrar a la pagina del dashboard vemos como node-red recibe el dato y lo muestra en la interfaz de usuario
+
+![Connected](./Imagenes/Resultado.png)
 
