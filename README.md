@@ -1,4 +1,21 @@
-# Descarga de Mosquitto
+# Servidor Web y comunicación con ESP32 por medio de un broker MQTT
+
+En este repositorio se presenta el proceso para montar un servidor web haciendo uso de Node-RED, y llevar a cabo su conexion con una tarjeta ESP32, haciendo uso del protocolo de comunicacion MQTT.
+
+## Comunicacion
+
+1. La comunicacion comienza en el ESP32, el cual se encarga de enviar un texto al broker MQTT por medio de una conexion de red local.
+
+2. El broker MQTT recibe el valor y permite que otros clientes lo lean a traves de el.
+
+3. Un servidor web ejecutado por Node-RED lee el dato recibido por el broker y ejecuta una accion de acuerdo al dato leido, en este caso esa accion es mostrar el texto en un sitio web.
+
+![mqttesp32](./Imagenes/mqttesp32.PNG)
+
+
+
+
+## Descarga de Mosquitto
 
 
 En el caso de distribuciones basadas en debian, la linea de comandos:
@@ -11,7 +28,7 @@ Para ejecutar mosquitto al arrancar el sistema, ejecutamos
 
 
     sudo systemctl enable mosquitto.service
-# Configuracion de server Mosquitto
+## Configuracion de server Mosquitto
 
 
 Reemplazar el archivo de configuracion con el comando mv
@@ -25,7 +42,7 @@ Reiniciar el servicio de mosquitto
     sudo systemctl restart mosquitto
 
 
-# Instalacion de Node-RED
+## Instalacion de Node-RED
 
 Lo primero ha realizar es la instalacion de nodejs, para eso escribimos la siguiente linea
 
@@ -39,7 +56,7 @@ Despues instalamos el node-red, y su complemento DASHBOARD
 Para acceder a node-RED, nos dirijimos al navegador y escribimos **localhost:1880**, esto nos llevara a la pantalla principal del node-red
 
 
-# Configuracion del flujo Node-RED
+## Configuracion del flujo Node-RED
 
 
 En la pagina principal de Node-RED, presionar la opcion de importar en el menu posterior derecho. Seleccionar el archivo **flows.json**
@@ -60,7 +77,7 @@ Como se puede apreciar, uno de los nodos es una salida de insterfaz de usuario d
 
 En esta interfaz se reciben los datos enviados por otros clientes al servidor mqtt
 
-# Recepcion de datos en DASHBOARD
+## Recepcion de datos en DASHBOARD
 
 Al entrar a la pagina del dashboard vemos como node-red recibe el dato y lo muestra en la interfaz de usuario
 
