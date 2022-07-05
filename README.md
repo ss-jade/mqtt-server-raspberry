@@ -12,6 +12,8 @@ En este repositorio se presenta el proceso para montar un servidor web haciendo 
 
 ![mqttesp32](./Imagenes/mqttesp32.PNG)
 
+Este proyecto trabaja en conjunto con un programa creado para el esp32, el cual se encuentra en el siguiente repostorio:
+
 
 
 
