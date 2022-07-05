@@ -14,6 +14,8 @@ En este repositorio se presenta el proceso para montar un servidor web haciendo 
 
 Este proyecto trabaja en conjunto con un programa creado para el esp32, el cual se encuentra en el siguiente repostorio:
 
+    http://gmarxcc.com:8088/andrespm/mqtt-server-esp32.git
+
 
 
 
