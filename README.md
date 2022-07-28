@@ -1,3 +1,8 @@
+# Introduction
+This reposity includes the basic information to mount a web server using **Node-RED** as a Dashboard and also working as a MQTT server using **Mosquitto**.
+
+*Again, thanks to Andrés Perez for the first version.*
+
 # Servidor Web y comunicación con ESP32 por medio de un broker MQTT
 
 En este repositorio se presenta el proceso para montar un servidor web haciendo uso de Node-RED, y llevar a cabo su conexion con una tarjeta ESP32, haciendo uso del protocolo de comunicacion MQTT.
@@ -16,46 +21,54 @@ Este proyecto trabaja en conjunto con un programa creado para el esp32, el cual 
 
     http://gmarxcc.com:8088/andrespm/mqtt-server-esp32.git
 
+# MQTT Server	
 
+## Installing Mosquitto
 
+For the Raspberry pi, based on Debian's distribution, we can use:
 
-## Descarga de Mosquitto
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install mosquitto
+```
 
+To execute *mosquitto* and enable every time the system starts:
 
-En el caso de distribuciones basadas en debian, la linea de comandos:
+```
+sudo systemctl enable mosquitto.service
+```
 
-    sudo apt update
-    sudo apt upgrade
-    sudo apt install mosquitto
+## Configuring the Mosquitto server
 
-Para ejecutar mosquitto al arrancar el sistema, ejecutamos
+First replace the default configuration file by the file providing in this repository:
 
+```
+sudo cp ./mosquitto.conf /etc/mosquitto/mosquitto.conf
+```
+then, create the password file instanced on the `mosquitto.conf` file
 
-    sudo systemctl enable mosquitto.service
-## Configuracion de server Mosquitto
-
-
-Reemplazar el archivo de configuracion con el comando mv
-
-    sudo mv mosquitto.conf /etc/mosquitto/mosquitto.conf
-
-
-Reiniciar el servicio de mosquitto
-
+```
+sudo touch /etc/mosquitto/passwd
+```
+finally, restart the service:
 
     sudo systemctl restart mosquitto
 
+## Node-RED installation
+To install **nodejs** writte in terminal:
+```
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+```
 
-## Instalacion de Node-RED
-
-Lo primero ha realizar es la instalacion de nodejs, para eso escribimos la siguiente linea
-
-    sudo apt install nodejs
-
-Despues instalamos el node-red, y su complemento DASHBOARD
+Then, let us install the *Node-RED* app and the *Dashboard* complement by using the *Node Package Manager*:
 
     npm install node-red
     npm install node-red-dashboard
+
+here
 
 Para acceder a node-RED, nos dirijimos al navegador y escribimos **localhost:1880**, esto nos llevara a la pantalla principal del node-red
 
