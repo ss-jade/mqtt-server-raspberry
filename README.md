@@ -65,8 +65,19 @@ sudo apt install npm
 
 Then, let us install the *Node-RED* app and the *Dashboard* complement by using the *Node Package Manager*:
 
-    npm install node-red
-    npm install node-red-dashboard
+```
+npm install node-red
+npm install node-red-dashboard
+```
+
+now, we require to run in background the app and verify that *node-RED* is runnig:
+```
+node-red &
+sudo netstat -plnt
+```
+
+
+
 
 here
 
