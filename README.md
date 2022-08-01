@@ -56,7 +56,7 @@ finally, restart the service:
     sudo systemctl restart mosquitto
 
 ## Node-RED installation
-To install **nodejs** writte in terminal:
+To install **nodejs** write in terminal:
 ```
 sudo apt update
 sudo apt install nodejs
@@ -70,24 +70,16 @@ npm install node-red
 npm install node-red-dashboard
 ```
 
-now, we require to run in background the app and verify that *node-RED* is runnig:
+now, we require to run in background the app and verify that *node-RED* is running:
 ```
 node-red &
 sudo netstat -plnt
 ```
+then, to get access to *node-RED* go to your web browser at `rasp-hostname.local:1880` or `rasp-ip:18080`.
 
 
-
-
-here
-
-Para acceder a node-RED, nos dirijimos al navegador y escribimos **localhost:1880**, esto nos llevara a la pantalla principal del node-red
-
-
-## Configuracion del flujo Node-RED
-
-
-En la pagina principal de Node-RED, presionar la opcion de importar en el menu posterior derecho. Seleccionar el archivo **flows.json**
+## A flow process in Node-RED
+In the *Node-RED* App press the `import`button at the right-lower menu and upload the `flows.json` file in this repository. 
 
 ![Importar](./Imagenes/Import_Node_Red.png)
 
