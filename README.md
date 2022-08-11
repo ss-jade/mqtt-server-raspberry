@@ -79,7 +79,31 @@ then, to get access to *node-RED* go to your web browser at `rasp-hostname.local
 
 
 ## A flow process in Node-RED
+A basic process is implemented on *Node-RED* to test the mqtt protocol. Thus, add the next blocks:
+
+1. `mqtt in` from network group
+2. `debug` from common
+3. `text`from dashboard
+
+then, double-click on `mqtt-in` to open and edit the node:
+![]()
+
+click on *Add new mqtt-brocker*, then, in the *Connection* tab: set *Name* to Rasp, point the server to the raspberry's ip or hostname and port 1883. Leave unchanged the *Security* and *Message* tabs and click on the **Add** button. 
+
+
+
+Finally, set the topic to `data/esp32` and the output to `a String` in the mqtt properties' node:
+
+Next, click on the `Deploy` button to check if the process can connect to the Broker:
+ 
+
+
+
+how  to connect???
+
+
 In the *Node-RED* App press the `import`button at the right-lower menu and upload the `flows.json` file in this repository. 
+
 
 ![Importar](./Imagenes/Import_Node_Red.png)
 
