@@ -86,16 +86,16 @@ A basic process is implemented on *Node-RED* to test the mqtt protocol. Thus, ad
 3. `text`from dashboard
 
 then, double-click on `mqtt-in` to open and edit the node:
-![]()
+![](./mqtt-node.png)
 
 click on *Add new mqtt-brocker*, then, in the *Connection* tab: set *Name* to Rasp, point the server to the raspberry's ip or hostname and port 1883. Leave unchanged the *Security* and *Message* tabs and click on the **Add** button. 
 
-
+![](./add-broker.png)
 
 Finally, set the topic to `data/esp32` and the output to `a String` in the mqtt properties' node:
-
+![](./topic.png)
 Next, click on the `Deploy` button to check if the process can connect to the Broker:
- 
+![](./deploy.png) 
 
 
 
